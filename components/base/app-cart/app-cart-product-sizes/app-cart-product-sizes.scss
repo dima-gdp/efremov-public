@@ -1,0 +1,16 @@
+.cart-product-sizes-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 2px;
+
+  &__item {
+    &:nth-child(2n) {
+      width: 100%;
+    }
+
+    &:nth-child(odd) {
+      width: 100%;
+    }
+  }
+}

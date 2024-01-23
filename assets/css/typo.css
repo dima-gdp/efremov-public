@@ -1,0 +1,229 @@
+@layer utilities {
+
+  .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6 {
+    @apply font-grandis font-medium
+  }
+
+  .text-h1 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .text-h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .text-h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .text-h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .text-h5 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .text-h6 {
+    font-size: 12px;
+    line-height: 28px;
+  }
+
+  .text-main {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .text-main-b {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+
+  .text-comment {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .text-comment-b {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  .text-but-lin {
+    font-size: 14px;
+    line-height: 22px;
+    @apply font-medium
+  }
+
+  .text-ma {
+    font-size: 11px;
+    line-height: 15px;
+    @apply font-medium
+  }
+
+  .text-a {
+    font-size: 12px;
+    line-height: 15px;
+    @apply font-medium
+  }
+
+  .text-ha {
+    font-size: 14px;
+    line-height: 22px;
+    @apply font-medium
+  }
+
+  .text-giant {
+    font-size: 40px;
+    line-height: 48px;
+    @apply font-medium
+  }
+
+
+  @screen md {
+    .text-h1 {
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    .text-h2{
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    .text-h3 {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    .text-h4 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    .text-h5 {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    .text-h6 {
+      font-size: 13px;
+      line-height: 21px;
+    }
+
+    .text-main {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    .text-main-b {
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: 500;
+    }
+
+    .text-comment {
+      font-size: 13px;
+      line-height: 21px;
+    }
+
+    .text-comment-b {
+      font-size: 13px;
+      line-height: 21px;
+      font-weight: 500;
+    }
+
+    .text-but-lin {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    .text-ma {
+      line-height: 15px;
+    }
+
+    .text-a {
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    .text-ha {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    .text-giant {
+      font-size: 72px;
+      line-height: 90px;
+    }
+  }
+
+  @screen xl {
+    .text-h1 {
+      font-size: 46px;
+      line-height: 54px;
+    }
+
+    .text-h2 {
+      font-size: 38px;
+      line-height: 46px;
+    }
+
+    .text-h3 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    .text-h4 {
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    .text-h5 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .text-main {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .text-main-b {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+
+    .text-but-lin {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .text-ma {
+      line-height: 17px;
+    }
+
+    .text-a {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .text-ha {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    .text-giant {
+      font-size: 100px;
+      line-height: 120px;
+    }
+  }
+}

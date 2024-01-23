@@ -1,0 +1,32 @@
+.order-history-product {
+  overflow: hidden;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    overflow: hidden;
+    margin-right: 8px;
+    border: 1px solid theme('colors.main.waffle');
+    transition: border 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid theme('colors.main.chocolate');
+    }
+
+    @media (min-width: theme('screens.md')) {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+
+      &:hover {
+        border: 3px solid theme('colors.main.chocolate');
+        transition: border-color 0.3s;
+      }
+    }
+  }
+}

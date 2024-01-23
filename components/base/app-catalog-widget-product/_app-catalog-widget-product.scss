@@ -1,0 +1,125 @@
+.widget-product-wrapper {
+  position: relative;
+  z-index: 1010;
+}
+
+.widget-product {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  width: 320px;
+  height: calc(100% - 40px);
+  z-index: 1010;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+
+  @media (min-width: theme("screens.md")) {
+    width: 699px;
+    top: 44px;
+    height: calc(100% - 44px);
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    right: 491px;
+    width: 731px;
+    top: 48px;
+    height: calc(100% - 48px);
+  }
+
+
+  // .cart-widget__container
+  &__container {
+    padding: 12px 8px 12px 10px;
+    background: theme("colors.main.sugar");
+    min-height: 100%;
+    box-shadow: -25px 0px 50px 5px rgba(202, 202, 202, 0.25);
+    margin-left: 66px;
+
+    @media (min-width: theme("screens.md")) {
+      margin-left: 98px;
+      padding: 20px;
+    }
+
+    @media (min-width: theme("screens.xl")) {
+      margin-left: 114px;
+      padding: 40px 30px 40px 27px;
+    }
+  }
+
+  &__close {
+    position: fixed;
+    top: 67px;
+    right: 254px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: theme("colors.main.sugar");
+    color: theme("colors.main.chocolate");
+    border-radius: 8px 0 0 8px;
+    box-shadow: -15px 0px 15px 5px rgba(202, 202, 202, 0.25);
+    z-index: 1;
+    transition: color 0.3s;
+
+    @media (min-width: theme("screens.md")) {
+      right: 600px;
+      width: 48px;
+      height: 48px;
+      box-shadow: -15px 0px 15px 5px rgba(202, 202, 202, 0.25);
+    }
+
+    @media (min-width: theme("screens.xl")) {
+      right: 1107px;
+      width: 64px;
+      height: 64px;
+      top: 88px;
+    }
+
+    &:hover {
+      color: theme("colors.main.waffle");
+    }
+  }
+
+  &__tabs {
+    margin-bottom: 16px;
+
+    @media (min-width: theme("screens.md")) {
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: theme("screens.xl")) {
+      display: none;
+    }
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 12px;
+    grid-row-gap: 2px;
+
+    @media (min-width: theme("screens.md")) {
+      grid-template-columns: auto minmax(90px, 1fr);
+      grid-column-gap: 70px;
+      grid-row-gap: 4px;
+    }
+
+    span:nth-child(odd) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__collection {
+    margin-bottom: 32px;
+
+    @media (min-width: theme("screens.md")) {
+      width: 180px;
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active.cart-widget,
+.fade-leave-active.cart-widget {
+  position: relative;
+  z-index: 1000;
+}
+
+/*slide-left*/
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: right 0.4s;
+}
+
+.slide-left-enter-to,
+.slide-left-leave {
+  right: 0;
+}
+
+.slide-left-enter,
+.slide-left-leave-to {
+  right: -110%;
+}

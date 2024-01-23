@@ -1,0 +1,22 @@
+.app-products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  margin-left: -10px;
+  margin-right: -10px;
+
+  @media (min-width: theme('screens.md')) {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-gap: 16px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: theme('screens.xl')) {
+    grid-template-columns: repeat(auto-fill, minmax(222px, 1fr));
+    grid-gap: 20px;
+  }
+
+  &__col {
+    max-width: 264px;
+  }
+}

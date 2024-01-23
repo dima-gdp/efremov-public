@@ -1,0 +1,88 @@
+.s-tabs {
+  display: inline-flex;
+  border-radius: 8px;
+  height: 32px;
+  background: theme("colors.main.nuga");
+  border: 3px solid theme("colors.main.nuga");
+
+  @media (min-width: theme("screens.md")) {
+    height: 36px;
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    height: 40px;
+  }
+
+  // .s-tabs__item
+  &__item {
+    color: theme("colors.main.sugar");
+    &--current {
+      color: theme("colors.main.chocolate");
+      .s-tabs__button {
+        background: theme("colors.main.souffle");
+      }
+    }
+  }
+  // .s-tabs__button
+  &__button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 9px;
+    border-radius: 5px;
+
+    @media (min-width: theme("screens.md")) {
+      padding: 0 13px;
+    }
+
+    @media (min-width: theme("screens.xl")) {
+      padding: 0 16px;
+    }
+  }
+  // .s-tabs__icon
+  &__icon {
+    margin-right: 4px;
+
+    @media (min-width: theme("screens.md")) {
+      margin-right: 7px;
+    }
+
+    @media (min-width: theme("screens.xl")) {
+      margin-right: 9px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      @media (min-width: theme("screens.md")) {
+        width: 18px;
+        height: 18px;
+      }
+
+      @media (min-width: theme("screens.xl")) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  // .s-tabs__content
+  &__content {
+  }
+
+  // COLOR LIGHT
+  &--light {
+    background: theme("colors.main.souffle");
+    border: 3px solid theme("colors.main.souffle");
+
+    .s-tabs__item {
+      color: theme("colors.main.chocolate");
+      &--current {
+        color: theme("colors.main.sugar");
+        .s-tabs__button {
+          background: theme("colors.main.marzipan");
+        }
+      }
+    }
+  }
+}

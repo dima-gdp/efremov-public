@@ -1,0 +1,41 @@
+.s-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 22px;
+  border-radius: 22px;
+  background: theme('colors.main.marzipan');
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background: theme('colors.main.sugar');
+    border-radius: 100%;
+    transition: left 0.5s, right 0.5s;
+  }
+
+  &--checked {
+    background: theme('colors.status.success');
+
+    &::before {
+      left: auto;
+      right: 2px;
+    }
+  }
+
+  &--disabled {
+    background: theme('colors.main.marzipan');
+    &::before {
+      background: theme('colors.main.waffle');
+    }
+  }
+}

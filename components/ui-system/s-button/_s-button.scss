@@ -1,0 +1,160 @@
+.s-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 16px;
+  min-height: 32px;
+  color: theme('colors.main.chocolate');
+  background: theme('colors.main.souffle');
+  border-radius: 4px;
+  user-select: none;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+
+  @media (min-width: theme('screens.md')) {
+    min-height: 36px;
+    font-size: 15px;
+    padding: 5px 18px;
+  }
+
+  @media (min-width: theme('screens.xl')) {
+    min-height: 40px;
+    padding: 5px 20px;
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: theme('colors.main.souffle');
+    background: theme('colors.main.chocolate');
+  }
+
+  &:active {
+    color: theme('colors.main.chocolate');
+    background: theme('colors.main.souffle');
+  }
+
+  &:disabled {
+    color: theme('colors.main.marzipan');
+    background: theme('colors.main.nuga');
+    cursor: default;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+
+    @media (min-width: theme('screens.md')) {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (min-width: theme('screens.xl')) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  // Dark
+  &--dark {
+    color: theme('colors.main.sugar');
+    background: theme('colors.main.chocolate');
+
+    &:hover {
+      color: theme('colors.main.chocolate');
+      background: theme('colors.main.souffle');
+    }
+
+    &:active {
+      color: theme('colors.main.sugar');
+      background: theme('colors.main.chocolate');
+    }
+
+    &:disabled {
+      color: theme('colors.main.sugar');
+      background: theme('colors.main.waffle');
+    }
+  }
+
+  // Ghost
+  &--ghost {
+    color: theme('colors.main.souffle');
+    border: 2px solid theme('colors.main.souffle');
+    background: transparent;
+
+    &:hover {
+      background: transparent;
+      border: 2px solid theme('colors.main.nuga');
+    }
+
+    &:active {
+      color: theme('colors.main.souffle');
+      border: 2px solid theme('colors.main.souffle');
+    }
+
+    &:disabled {
+      color: theme('colors.main.nuga');
+      border: 2px solid theme('colors.main.nuga');
+      background: transparent;
+    }
+
+    // Ghost Dark
+    &.s-button--dark {
+      color: theme('colors.main.chocolate');
+      border: 2px solid theme('colors.main.chocolate');
+
+      &:hover {
+        border: 2px solid theme('colors.main.souffle');
+      }
+
+      &:active {
+        color: theme('colors.main.chocolate');
+        border: 2px solid theme('colors.main.chocolate');
+      }
+
+      &:disabled {
+        color: theme('colors.main.waffle');
+        border: 2px solid theme('colors.main.waffle');
+      }
+    }
+  }
+
+  // Transparent
+  &--transparent {
+    padding: 0;
+    color: theme('colors.main.souffle');
+    background: transparent;
+
+    &:hover {
+      color: theme('colors.main.nuga');
+      background: transparent;
+    }
+
+    &:active {
+      color: theme('colors.main.souffle');
+    }
+
+    &:disabled {
+      color: theme('colors.main.nuga');
+      background: transparent;
+    }
+
+    // Transparent Dark
+    &.s-button--dark {
+      color: theme('colors.main.chocolate');
+
+      &:hover {
+        color: theme('colors.main.waffle');
+      }
+
+      &:active {
+        color: theme('colors.main.chocolate');
+      }
+
+      &:disabled {
+        color: theme('colors.main.waffle');
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.widget-cart-alert {
+  &__icon {
+    svg {
+      fill: theme('colors.status.warning');
+    }
+  }
+}

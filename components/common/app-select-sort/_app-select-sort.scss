@@ -1,0 +1,61 @@
+.select-sort {
+  position: relative;
+  // .select-sort__top
+  &__top {
+    display: flex;
+    align-items: center;
+    user-select: none;
+  }
+  // .select-sort__val
+  &__val {
+    position: relative;
+    z-index: 29;
+    white-space: nowrap;
+  }
+  // .select-sort__arrow
+  &__arrow {
+    margin-left: 6px;
+    width: 10px;
+    height: 10px;
+  }
+  // .select-sort__dropdown
+  &__dropdown {
+    position: absolute;
+    top: -11px;
+    left: -17px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background: theme("colors.main.sugar");
+    border: 1px solid theme("colors.main.marzipan");
+    border-radius: 4px;
+    z-index: 30;
+
+    @media (min-width: theme("screens.xl")) {
+      top: -10px;
+      padding-top: 9px;
+    }
+  }
+  // .select-sort__item
+  &__item {
+    button {
+      width: 100%;
+      text-align: left;
+      padding: 0 16px;
+      font-size: 14px;
+      line-height: 23px;
+      user-select: none;
+      white-space: nowrap;
+      transition: background 0.3s, color 0.2s;
+
+      &:hover {
+        color: theme("colors.main.sugar");
+        background: theme("colors.main.chocolate");
+      }
+
+      @media (min-width: theme("screens.xl")) {
+        font-size: 16px;
+        line-height: 32px;
+      }
+    }
+  }
+}

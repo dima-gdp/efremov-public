@@ -1,0 +1,168 @@
+.s-input-number {
+  position: relative;
+  padding: 0 10px;
+
+  &__minus,
+  &__plus {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: theme("colors.main.chocolate");
+    border-radius: 100%;
+    transition: background 0.2s linear;
+
+    &:hover {
+      background: theme("colors.main.souffle");
+      &::before,
+      &::after {
+        background: theme("colors.main.chocolate");
+      }
+    }
+  }
+
+  // .s-input-number__minus
+  &__minus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    transform: translate(0, -50%);
+    &::before {
+      content: "";
+      width: 8px;
+      height: 2px;
+      background: theme("colors.main.souffle");
+    }
+  }
+  // .s-input-number__input
+  &__input {
+    width: 70px;
+    height: 32px;
+    border: 1px solid theme("colors.main.marzipan");
+    border-radius: 4px;
+    padding: 2px 19px;
+    outline: none;
+
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+
+    &:disabled {
+      background: theme("colors.main.sugar");
+    }
+
+    @media (min-width: theme("screens.md")) {
+      width: 80px;
+      height: 36px;
+    }
+
+    @media (min-width: theme("screens.xl")) {
+      width: 90px;
+      height: 40px;
+    }
+  }
+  // .s-input-number__plus
+  &__plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    transform: translate(0, -50%);
+
+    &::before,
+    &::after {
+      content: "";
+      background: theme("colors.main.souffle");
+      position: absolute;
+    }
+
+    &::before {
+      width: 8px;
+      height: 2px;
+    }
+
+    &::after {
+      width: 2px;
+      height: 8px;
+    }
+  }
+
+  &--disabled {
+    .s-input-number__minus,
+    .s-input-number__plus {
+      background: theme("colors.main.sugar");
+      border: 1px solid theme("colors.main.marzipan");
+      cursor: default;
+
+      &::before,
+      &::after {
+        background: theme("colors.main.marzipan");
+      }
+    }
+  }
+
+  &--dark {
+    .s-input-number__input {
+      color: theme("colors.main.sugar");
+      background: theme("colors.main.nuga");
+      border: none;
+    }
+
+    .s-input-number__minus,
+    .s-input-number__plus {
+      background: theme("colors.main.souffle");
+      border: none;
+
+      &::before,
+      &::after {
+        background: theme("colors.main.chocolate");
+      }
+
+      &:hover {
+        background: theme("colors.main.chocolate");
+
+        &::before,
+        &::after {
+          background: theme("colors.main.sugar");
+        }
+      }
+    }
+  }
+
+  // Dark-Disabled
+  &--dark.s-input-number--disabled {
+    .s-input-number__input {
+      background: theme("colors.main.chocolate");
+      color: theme("colors.main.marzipan");
+      border: 1px solid theme("colors.main.marzipan");
+      cursor: default;
+    }
+
+    .s-input-number__minus,
+    .s-input-number__plus {
+      background: theme("colors.main.chocolate");
+      border: 1px solid theme("colors.main.marzipan");
+      cursor: default;
+
+      &::before,
+      &::after {
+        background: theme("colors.main.marzipan");
+      }
+
+      &:hover {
+        background: theme("colors.main.chocolate");
+
+        &::before,
+        &::after {
+          background: theme("colors.main.marzipan");
+        }
+      }
+    }
+  }
+}
